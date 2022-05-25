@@ -29,7 +29,7 @@ const App = () => {
     fetch(url)
     .then(data => data.json())
     .then(data => {
-      console.log(data)
+      console.log(data.results)
       setMonsters(data.results);
       setPrevious(data.previous);
       setNext(data.next);

@@ -1,5 +1,5 @@
 // import {Component} from 'react';
-import React, {useState, useEffect} from 'react';
+import React, {useState, useMemo} from 'react';
 import './card.styles.css'
 
 const Card = ({monster}) => {
@@ -7,7 +7,7 @@ const Card = ({monster}) => {
   const [height, setHeight] = useState('');
   const {name} = monster;
 
-  useEffect(() => {
+  useMemo(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}/`)
     .then(data => data.json())
     .then(data => {
@@ -15,7 +15,6 @@ const Card = ({monster}) => {
       setHeight(data.height);
       })
   }, [name])
-
 
   return (
     <div className='card-container' key={name}>
