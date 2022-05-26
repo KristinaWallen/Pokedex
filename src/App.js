@@ -46,7 +46,7 @@ const App = () => {
   return(
     <>
     <div className="App">
-      <h1 className='app-title'>Gotta Catch Em All</h1>
+      <h1 className='app-title'>Gotta Catch 'Em All</h1>
       <SearchBox 
       className='search-box'
       onChangeHandler={onSearchChange} 

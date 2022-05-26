@@ -4,7 +4,7 @@ import './card.styles.css'
 
 const Card = ({monster}) => {
   const [image, setImage] = useState('loading');
-  const [height, setHeight] = useState('');
+  const [abilities, setAbilities] = useState([])
   const {name} = monster;
 
   useMemo(() => {
@@ -12,9 +12,13 @@ const Card = ({monster}) => {
     .then(data => data.json())
     .then(data => {
       setImage(data.sprites.front_default);
-      setHeight(data.height);
+      setAbilities(data.abilities);
       })
   }, [name])
+
+  const renderedAbilities = abilities.map((ability, i) => {
+    return (<div key={i}>{ability.ability.name}</div>)
+  })
 
   return (
     <div className='card-container' key={name}>
@@ -24,7 +28,7 @@ const Card = ({monster}) => {
         width={150}
         height={150}/>
         <h2>{name}</h2>
-        <p>Height: {height}</p>
+        <p>Abilities: {renderedAbilities}</p>
     </div>)
 }
 // class Card extends Component {
