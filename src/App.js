@@ -60,8 +60,11 @@ const App = () => {
     </div>
     </>
   )
-
 }
+
+export default App;
+
+//same functionality using class components
 // class App extends Component {
 //   constructor() {
 //     super() 
@@ -139,4 +142,4 @@ const App = () => {
 //   }
 // }
 
-export default App;
+

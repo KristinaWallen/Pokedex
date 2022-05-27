@@ -31,12 +31,16 @@ const Card = ({monster}) => {
         <p>Abilities: {renderedAbilities}</p>
     </div>)
 }
+
+export default Card;
+
+//same functionality using class components
 // class Card extends Component {
 //   constructor() {
 //   super();
 //   this.state = {
 //     image: 'loading',
-//     species: ''
+//     abilities : []
 //   }
 // }
 
@@ -47,7 +51,7 @@ const Card = ({monster}) => {
 //     .then(data => {
 //       this.setState({
 //         image: data.sprites.front_default,
-//         height: data.height})
+//         abilities: data.abilities})
 //     })
 //   }
 
@@ -61,6 +65,10 @@ const Card = ({monster}) => {
 //   }
 
 //   render() {
+//  const {abilities} = this.state
+  // const renderedAbilities = abilities.map((ability, i) => {
+  //   return (<div key={i}>{ability.ability.name}</div>)
+  // })
 //     const {name} = this.props.monster;
 //     return (
 //     <div className='card-container' key={name}>
@@ -70,9 +78,8 @@ const Card = ({monster}) => {
 //         width={150}
 //         height={150}/>
 //         <h2>{name}</h2>
-//         <p>Height: {this.state.height}</p>
+//         <p>Abilities: {renderedAbilities}</p>
 //     </div>)
 //   }
 // }
 
-export default Card;

@@ -1,5 +1,4 @@
 // import {Component} from 'react';
-
 import './search-box.styles.css';
 
 const SearchBox = ({className, placeholder, onChangeHandler}) => {
@@ -13,6 +12,9 @@ const SearchBox = ({className, placeholder, onChangeHandler}) => {
   )
 }
 
+export default SearchBox;
+
+//same functionality using class components
 // class SearchBox extends Component {
 
 //   render() {
@@ -27,4 +29,3 @@ const SearchBox = ({className, placeholder, onChangeHandler}) => {
 //   }
 // }
 
-export default SearchBox;

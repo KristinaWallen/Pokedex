@@ -13,6 +13,9 @@ const CardList = ({monsters}) => {
   )
 }
 
+export default CardList;
+
+//same functionality using class components
 // class CardList extends Component {
 
 //   render() {
@@ -28,4 +31,3 @@ const CardList = ({monsters}) => {
 //   }
 // }
 
-export default CardList;
